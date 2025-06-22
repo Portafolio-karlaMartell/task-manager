@@ -24,7 +24,7 @@ Este es un proyecto web desarrollado por Karla Martell, pensado para freelancers
 
 ## 🌐 Vista en vivo
 
-📎 https://tu_usuario.github.io/task-manager/
+📎 https://portafolio-karlamartell.github.io/task-manager/
 
 ---
 
