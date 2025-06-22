@@ -1,0 +1,178 @@
+/* ===== RESET BÁSICO ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===== VARIABLES DE COLOR ===== */
+:root {
+  --blue-light: #a2d2ff;
+  --blue: #3a86ff;
+  --blue-dark: #023e8a;
+  --gray-light: #f0f0f0;
+  --gray-medium: #999999;
+  --gray-dark: #333333;
+  --shadow-color: rgba(58, 134, 255, 0.4);
+  --font-family: 'Poppins', sans-serif;
+}
+
+/* ===== ESTILOS GLOBALES ===== */
+body {
+  font-family: var(--font-family);
+  background-color: var(--gray-light);
+  color: var(--gray-dark);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+}
+
+.container {
+  background: white;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 8px 20px var(--shadow-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 12px 30px var(--shadow-color);
+}
+
+/* ===== ENCABEZADO ===== */
+header h1 {
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--blue-dark);
+  margin-bottom: 8px;
+}
+
+header p {
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--blue);
+  margin-bottom: 24px;
+}
+
+/* ===== FORMULARIO ===== */
+form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border-radius: 12px;
+  border: 2px solid var(--blue-light);
+  transition: border-color 0.3s ease;
+  outline-offset: 2px;
+}
+
+input[type="text"]:focus {
+  border-color: var(--blue-dark);
+}
+
+button {
+  padding: 12px 20px;
+  background: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 15px var(--shadow-color);
+}
+
+button:hover {
+  background: var(--blue-dark);
+  box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+/* ===== LISTA DE TAREAS ===== */
+.task-list {
+  list-style: none;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+}
+
+.task-list li {
+  background: var(--blue-light);
+  padding: 12px 20px;
+  border-radius: 12px;
+  margin-bottom: 15px;
+  box-shadow: 0 6px 10px var(--shadow-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+}
+
+.task-list li.completed {
+  background: #d0f0fd;
+  text-decoration: line-through;
+  color: var(--gray-medium);
+}
+
+.task-list li:hover {
+  background: var(--blue);
+  color: white;
+  box-shadow: 0 8px 15px var(--shadow-color);
+}
+
+/* Botones dentro de la tarea */
+.task-list button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  color: var(--blue-dark);
+  transition: color 0.3s ease;
+}
+
+.task-list button:hover {
+  color: #ff4747;
+}
+
+/* ===== SCROLL ESTILIZADO (solo para WebKit) ===== */
+.task-list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.task-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+  background: var(--blue);
+  border-radius: 12px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 520px) {
+  body {
+    padding: 20px 10px;
+  }
+
+  .container {
+    padding: 25px 20px;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  button {
+    padding: 12px 16px;
+    font-size: 0.9rem;
+  }
+}
